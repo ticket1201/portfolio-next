@@ -1,0 +1,146 @@
+:export {
+  maxWidthBreak1450: 1450px;
+  maxWidthBreak1200: 1200px;
+  maxWidthBreak1080: 1080px;
+  maxWidthBreak992: 992px;
+  maxWidthBreak768: 768px;
+  maxWidthBreak650: 650px;
+  maxWidthBreak480: 480px;
+  montserratFont: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  placeHolderColor: #7c7c7c;
+  inputWhite: #f8f9fa;
+  lightGray: #f8f8f8;
+  colorGray: #767676;
+  colorBlack: #18191a;
+  lightBlack: #6c757d;
+  colorWhite: #ffffff;
+}
+
+.projectsWrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f8f8f8;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 100%;
+}
+.projectsWrapper .projectTitle {
+  align-self: flex-start;
+}
+
+.projectItem {
+  display: flex;
+  justify-content: center;
+}
+
+.projectCard {
+  width: 340px;
+  flex-shrink: 0;
+  box-shadow: 7px 7px 10px -5px rgba(34, 60, 80, 0.45);
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+@media screen and (max-width: 460px) {
+  .projectCard {
+    width: 90%;
+  }
+}
+.projectCard button {
+  display: none;
+}
+@media (hover: hover) {
+  .projectCard:hover {
+    animation: shadow-drop-br 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  .projectCard:hover .imageWrapper {
+    filter: grayscale(0);
+  }
+  .projectCard:hover .imageWrapper:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+  }
+  .projectCard:hover .hiddenBtn {
+    position: relative;
+    display: block;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    z-index: 10;
+  }
+}
+@media (hover: none) {
+  .projectCard div.imageWrapper {
+    filter: grayscale(0);
+  }
+  .projectCard div.imageWrapper:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+  }
+  .projectCard div.imageWrapper .hiddenBtn {
+    position: relative;
+    display: block;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    z-index: 10;
+  }
+}
+.projectCard .imageWrapper {
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.projectCard .descriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 30px 25px;
+  border-radius: 0 0 10px 10px;
+  background: #f8f9fa;
+}
+.projectCard .descriptionWrapper p {
+  color: #6c757d;
+  margin: 8px 0;
+}
+
+@keyframes shadow-drop-br {
+  0% {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  }
+  100% {
+    transform: translate(-3px, -3px);
+    box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=Projects.module.css.map */

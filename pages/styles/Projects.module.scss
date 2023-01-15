@@ -1,0 +1,142 @@
+@import "./../../styles/variables.module";
+@import "./../../styles/mixins.module";
+
+.projectsWrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  @include displayFlex(column, center);
+  background: $lightGray;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 100%;
+
+  & .projectTitle {
+    align-self: flex-start;
+  }
+}
+
+
+.projectItem{
+  display: flex;
+  justify-content: center;
+
+}
+.projectCard {
+  width: 340px;
+  flex-shrink: 0;
+  box-shadow: 7px 7px 10px -5px rgba(34, 60, 80, 0.45);
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  @media screen {
+    @media (max-width: 460px) {
+      width: 90%;
+    }
+  }
+
+  & button {
+    display: none;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      animation: shadow-drop-br 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+
+      & .imageWrapper {
+        filter: grayscale(0);
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          border-radius: 10px 10px 0 0;
+          background: rgba(0, 0, 0, 0.3);
+          z-index: 5;
+        }
+      }
+
+      & .hiddenBtn {
+        position: relative;
+        display: block;
+        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        z-index: 10;
+      }
+
+
+    }
+  }
+  @media (hover: none) {
+    & div.imageWrapper {
+      filter: grayscale(0);
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 10px 10px 0 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 5;
+      }
+
+      & .hiddenBtn {
+        position: relative;
+        display: block;
+        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        z-index: 10;
+      }
+    }
+  }
+
+
+  & .imageWrapper {
+    height: 300px;
+    position: relative;
+    @include displayFlex(row, center);
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+  }
+
+  & .descriptionWrapper {
+    @include displayFlex(column, center);
+    align-items: flex-start;
+    padding: 0 30px 25px;
+    border-radius: 0 0 10px 10px;
+    background: $inputWhite;
+
+    & p {
+      color: $lightBlack;
+      margin: 8px 0;
+    }
+  }
+}
+
+
+@keyframes shadow-drop-br {
+  0% {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  }
+  100% {
+    transform: translate(-3px, -3px);
+    box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
