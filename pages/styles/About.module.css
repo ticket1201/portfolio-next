@@ -1,0 +1,117 @@
+:export {
+  maxWidthBreak1450: 1450px;
+  maxWidthBreak1200: 1200px;
+  maxWidthBreak1080: 1080px;
+  maxWidthBreak992: 992px;
+  maxWidthBreak768: 768px;
+  maxWidthBreak650: 650px;
+  maxWidthBreak480: 480px;
+  montserratFont: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  placeHolderColor: #7c7c7c;
+  inputWhite: #f8f9fa;
+  lightGray: #f8f8f8;
+  colorGray: #767676;
+  colorBlack: #18191a;
+  lightBlack: #6c757d;
+  colorWhite: #ffffff;
+}
+
+.About {
+  min-height: 100vh;
+  flex: 1 1 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.About .popup {
+  overflow-x: scroll;
+}
+.About .wrapper {
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 40px;
+  display: flex;
+  box-sizing: content-box;
+}
+.About .wrapper .img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+.About .wrapper h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+  margin: 30px 0 8px 0;
+}
+.About .wrapper .textWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+.About .wrapper .textWrapper .descriptionText {
+  width: 45%;
+  line-height: 30px;
+  font-style: italic;
+}
+.About .wrapper .textWrapper .descriptionText p {
+  margin-bottom: 35px;
+}
+.About .wrapper .textWrapper .aboutTextWrapper {
+  width: 45%;
+}
+.About .wrapper .textWrapper .aboutTextWrapper .aboutText {
+  display: grid;
+  grid-template-columns: 110px 2fr;
+}
+.About .wrapper .textWrapper .aboutTextWrapper .aboutTextTitle {
+  font-weight: 700;
+}
+.About .wrapper .textWrapper p {
+  color: #767676;
+}
+@media screen and (max-width: 768px) {
+  .About .wrapper {
+    gap: 30px;
+  }
+  .About .wrapper h3 {
+    font-size: 1.75rem;
+    align-self: center;
+    margin: 0;
+  }
+  .About .wrapper .textWrapper {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .About .wrapper .textWrapper .descriptionText {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .About .wrapper .textWrapper .descriptionText button {
+    align-self: center;
+  }
+  .About .wrapper .textWrapper .descriptionText p {
+    text-align: center;
+    margin: 0 0 15px;
+  }
+  .About .wrapper .textWrapper .aboutTextWrapper {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .About .wrapper h3 {
+    font-size: 1.725rem;
+  }
+}
+
+/*# sourceMappingURL=About.module.css.map */
