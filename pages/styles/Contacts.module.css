@@ -1,0 +1,160 @@
+:export {
+  maxWidthBreak1450: 1450px;
+  maxWidthBreak1200: 1200px;
+  maxWidthBreak1080: 1080px;
+  maxWidthBreak992: 992px;
+  maxWidthBreak768: 768px;
+  maxWidthBreak650: 650px;
+  maxWidthBreak480: 480px;
+  montserratFont: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  placeHolderColor: #7c7c7c;
+  inputWhite: #f8f9fa;
+  lightGray: #f8f8f8;
+  colorGray: #767676;
+  colorBlack: #18191a;
+  lightBlack: #6c757d;
+  colorWhite: #ffffff;
+}
+
+.contacts {
+  min-height: 100vh;
+  flex: 1 1 100%;
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.contacts .slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1 1 100%;
+  height: 100%;
+  align-items: center;
+}
+.contacts h2 {
+  align-self: flex-start;
+  font-weight: 800;
+  margin-bottom: 62px;
+}
+
+.wrapper {
+  max-width: 880px;
+  display: flex;
+  box-sizing: content-box;
+  padding: 0 40px;
+  flex: 1 1 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.wrapper button {
+  align-self: flex-start;
+}
+
+.map {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 50px;
+}
+.map iframe {
+  width: inherit;
+  height: inherit;
+  border: 0;
+  -webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
+  -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+@media screen and (max-width: 480px) {
+  .map {
+    display: none;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+.form input {
+  font-size: 60%;
+}
+.form textarea {
+  font-size: 60%;
+}
+.form p {
+  margin: 8px 8px 0;
+  color: #ff4646;
+}
+.form button {
+  margin-top: 18px;
+}
+.form .input {
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px 15px;
+  font-style: italic;
+  background: #ffffff;
+}
+.form .input:nth-child(n+1) {
+  margin-top: 10px;
+}
+.form .input::placeholder {
+  font-style: italic;
+  font-weight: bold;
+  color: #7c7c7c;
+}
+.form .input:focus {
+  outline: none;
+  border-color: #18191a;
+}
+.form .textarea {
+  min-height: 100px;
+  resize: none;
+  font-style: italic;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #7c7c7c;
+  padding: 15px;
+  background: #ffffff;
+  margin: 8px 0 0;
+}
+.form .textarea::placeholder {
+  font-weight: bold;
+  color: #7c7c7c;
+}
+.form .textarea:focus {
+  outline: none;
+  border-color: #18191a;
+}
+
+.formFade {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 20px;
+  z-index: 10;
+}
+.formFade p {
+  word-break: normal;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=Contacts.module.css.map */

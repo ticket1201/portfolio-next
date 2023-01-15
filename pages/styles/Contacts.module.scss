@@ -1,0 +1,149 @@
+@import "./../../styles/variables.module";
+@import "./../../styles/mixins.module";
+
+.contacts {
+  min-height: 100vh;
+  flex: 1 1 100%;
+  background: $lightGray;
+  @include displayFlex(row, center);
+  align-items: center;
+  overflow: hidden;
+
+  .slide{
+    @include displayFlex(row, center);
+    flex: 1 1 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  & h2 {
+    align-self: flex-start;
+    font-weight: 800;
+    margin-bottom: 62px;
+  }
+}
+
+.wrapper {
+  max-width: 880px;
+  display: flex;
+  box-sizing: content-box;
+  padding: 0 40px;
+  flex: 1 1 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  & button {
+    align-self: flex-start;
+  }
+}
+
+.map {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 50px;
+
+  & iframe {
+    width: inherit;
+    height: inherit;
+    border: 0;
+    -webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+  }
+
+  @media screen {
+    @media (max-width: $maxWidthBreak480) {
+      display: none;
+    }
+  }
+}
+
+.form {
+  @include displayFlex(column, center);
+  width: 100%;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  & input{
+    font-size: 60%;
+  }
+  & textarea{
+    font-size: 60%;
+  }
+  & p{
+    margin: 8px 8px 0;
+    color: #ff4646;
+  }
+
+  & button{
+    margin-top: 18px;
+  }
+
+  & .input {
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px 15px;
+    font-style: italic;
+    background: $colorWhite;
+
+    &:nth-child(n+1){
+      margin-top: 10px;
+    }
+
+    &::placeholder {
+      font-style: italic;
+      font-weight: bold;
+      color: #7c7c7c;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $colorBlack;
+    }
+  }
+
+  & .textarea {
+    min-height: 100px;
+    resize: none;
+    font-style: italic;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #7c7c7c;
+    padding: 15px;
+    background: $colorWhite;
+    margin: 8px 0 0;
+
+    &::placeholder {
+      font-weight: bold;
+      color: $placeHolderColor;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $colorBlack;
+    }
+  }
+
+}
+
+.formFade{
+  position: absolute;
+  background-color: rgba(0,0,0,0.4);
+  @include displayFlex(row, center);
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: $colorWhite;
+  font-size: 2rem;
+  padding: 20px;
+  z-index: 10;
+  & p{
+    word-break: normal;
+    text-align: center;
+  }
+}
+
+.hide{
+  display: none;
+}
