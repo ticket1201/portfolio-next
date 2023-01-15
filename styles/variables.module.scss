@@ -1,0 +1,38 @@
+//breaks
+$maxWidthBreak1450: 1450px;
+$maxWidthBreak1200: 1200px;
+$maxWidthBreak1080: 1080px;
+$maxWidthBreak992: 992px;
+$maxWidthBreak768: 768px;
+$maxWidthBreak650: 650px;
+$maxWidthBreak480: 480px;
+//fonts
+$montserratFont: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+//colors
+$placeHolderColor: #7c7c7c;
+$inputWhite: #f8f9fa;
+$lightGray: #f8f8f8;
+$colorGray: #767676;
+$colorBlack: #18191a;
+$lightBlack: #6c757d;
+$colorWhite: #ffffff;
+
+:export{
+  maxWidthBreak1450: $maxWidthBreak1450;
+  maxWidthBreak1200: $maxWidthBreak1200;
+  maxWidthBreak1080: $maxWidthBreak1080;
+  maxWidthBreak992: $maxWidthBreak992;
+  maxWidthBreak768: $maxWidthBreak768;
+  maxWidthBreak650: $maxWidthBreak650;
+  maxWidthBreak480: $maxWidthBreak480;
+  //fonts
+  montserratFont: $montserratFont;
+  //colors
+  placeHolderColor: $placeHolderColor;
+  inputWhite: $inputWhite;
+  lightGray: $lightGray;
+  colorGray: $colorGray;
+  colorBlack: $colorBlack;
+  lightBlack: $lightBlack;
+  colorWhite: $colorWhite;
+}
