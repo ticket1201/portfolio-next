@@ -1,0 +1,179 @@
+:export {
+  maxWidthBreak1450: 1450px;
+  maxWidthBreak1200: 1200px;
+  maxWidthBreak1080: 1080px;
+  maxWidthBreak992: 992px;
+  maxWidthBreak768: 768px;
+  maxWidthBreak650: 650px;
+  maxWidthBreak480: 480px;
+  montserratFont: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  placeHolderColor: #7c7c7c;
+  inputWhite: #f8f9fa;
+  lightGray: #f8f8f8;
+  colorGray: #767676;
+  colorBlack: #18191a;
+  lightBlack: #6c757d;
+  colorWhite: #ffffff;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  background: #f8f9fa;
+  z-index: 10;
+  overflow: hidden;
+  min-height: 74vh;
+  padding: 110px 70px;
+}
+@media screen and (max-width: 992px) {
+  .skills {
+    padding: 50px 60px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .skills {
+    width: 70vw;
+    padding: 30px 30px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 110px;
+}
+@media screen and (max-width: 1200px) {
+  .wrapper .skillCard {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .wrapper {
+    gap: 35px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 35px;
+  }
+  .wrapper .skillCard {
+    width: 100%;
+  }
+}
+
+.cardContainer {
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cardContainer h3 {
+  font-size: 1.5rem;
+  text-align: start;
+}
+@media screen and (max-width: 1080px) {
+  .cardContainer {
+    justify-content: center;
+    gap: 35px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .cardContainer {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.skillCard {
+  width: 380px;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+@media screen and (max-width: 480px) {
+  .skillCard {
+    width: 310px;
+  }
+}
+.skillCard .textWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: inherit;
+}
+.skillCard p {
+  margin: 5px 0 8px;
+}
+.skillCard .line {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.09);
+}
+.skillCard .lineUp {
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: #767676;
+}
+
+.hardSkillWrapper {
+  max-width: 380px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hardSkillCard .hardName {
+  width: content-box;
+  padding: 10px;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+.factWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 992px) {
+  .factWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.fact {
+  box-sizing: border-box;
+  width: fit-content;
+  min-width: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 40px;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+}
+.fact h3 {
+  margin: 0;
+}
+
+/*# sourceMappingURL=Skills.module.css.map */
