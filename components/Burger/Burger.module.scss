@@ -1,0 +1,25 @@
+@import "./../../styles/variables.module";
+@import "./../../styles/mixins.module";
+
+.burger {
+  position: fixed;
+  @include displayFlex(row, center);
+  align-items: center;
+  top: 30px;
+  right: 35px;
+  height: 60px;
+  width: 60px;
+  display: none;
+  cursor: pointer;
+  font-size: 2.25rem;
+  color: $colorBlack;
+  background: $colorWhite;
+  border-radius: 100%;
+  z-index: 1;
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  @media screen {
+    @media (max-width: $maxWidthBreak1200) {
+      display: flex;
+    }
+  }
+}
