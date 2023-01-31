@@ -1,15 +1,15 @@
 import emailjs from '@emailjs/browser';
+import {MyFormValues} from '../pages/contacts/ContactForm/ContactForm';
 
 export const api = {
-    sendEmail: (setStatus: (status:string) => void, setIsSending: (isSending:boolean) => void, form: React.MutableRefObject<any>) => {
+    sendEmail: (setStatus: (status:string) => void, setIsSending: (isSending:boolean) => void, values: MyFormValues) => {
         setIsSending(true)
         setStatus('Sending')
-        emailjs.sendForm('service_7m929wc', 'template_vubtb87', form.current!, '32SWopQrOULWq2gAI')
+        emailjs.send('service_7m929wc', 'template_vubtb87', values, '32SWopQrOULWq2gAI')
             .then(() => {
                 setStatus('Your message has been sent. Thank you.')
                 setTimeout(() => {
                     setIsSending(false)
-
                 }, 2000)
 
             }, () => {
