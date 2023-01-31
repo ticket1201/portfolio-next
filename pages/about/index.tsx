@@ -14,7 +14,12 @@ const Index = () => {
 
 
     const overlayStyle = {
-        backgroundColor: `rgba(0, 0, 0, 0.6)`
+        backgroundColor: `rgba(0, 0, 0, 0.6)`,
+        height: '100vh'
+    }
+    const contentStyle = {
+        overflow: 'scroll',
+        height: '80vh'
     }
 
     return (
@@ -35,7 +40,9 @@ const Index = () => {
                                     Hello, I am a creative Frontend developer, more information below. Just click the button to check my skills and tech stack.
                                 </p>
                                 <Popup trigger={<button>Read more</button>} modal position={'center center'}
-                                       overlayStyle={overlayStyle} className={'popup'}>
+                                       overlayStyle={overlayStyle}
+                                       contentStyle={contentStyle}
+                                       className={s.popup}>
                                     <Fade className={s.fade} duration={100} delay={0}>
                                         <Skills/>
                                     </Fade>
