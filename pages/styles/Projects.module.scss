@@ -120,6 +120,28 @@
   }
 }
 
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #000000;
+  cursor: pointer;
+}
+
+.arrowLeft {
+  left: 5px;
+}
+
+.arrowRight {
+  left: auto;
+  right: 5px;
+}
+
+.arrowDisabled {
+  fill: rgba(138, 138, 138, 0.5);
+}
 
 @keyframes shadow-drop-br {
   0% {

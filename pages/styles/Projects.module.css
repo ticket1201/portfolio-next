@@ -125,6 +125,29 @@
   margin: 8px 0;
 }
 
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #000000;
+  cursor: pointer;
+}
+
+.arrowLeft {
+  left: 5px;
+}
+
+.arrowRight {
+  left: auto;
+  right: 5px;
+}
+
+.arrowDisabled {
+  fill: rgba(138, 138, 138, 0.5);
+}
+
 @keyframes shadow-drop-br {
   0% {
     box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
