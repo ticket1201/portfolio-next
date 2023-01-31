@@ -3,27 +3,37 @@ import s from './Skills.module.scss'
 import SkillCardSoft from './SkillCardSoft/SkillCardSoft';
 import SkillCardHard from './SkillCardHard/SkillCardHard';
 import Fact from './Fact/Fact';
+
+
 const Skills = () => {
     return (
-        <section className={s.skills} id={`skills`}>
+        <section className={s.skills}>
             <div className={s.wrapper}>
                 <div className={`${s.cardContainer}`}>
                     <h3>Hard Skills</h3>
                     <div className={s.hardSkillWrapper}>
-                        <SkillCardHard skillTitle={'HTML5'}/>
                         <SkillCardHard skillTitle={'JavaScript'}/>
-                        <SkillCardHard skillTitle={'Git'}/>
-                        <SkillCardHard skillTitle={'CSS3'}/>
-                        <SkillCardHard skillTitle={'Sass'}/>
-                        <SkillCardHard skillTitle={'FLUX'}/>
-                        <SkillCardHard skillTitle={'React'}/>
-                        <SkillCardHard skillTitle={'Redux'}/>
-                        <SkillCardHard skillTitle={'Hooks'}/>
                         <SkillCardHard skillTitle={'Typescript'}/>
+                        <SkillCardHard skillTitle={'HTML5'}/>
+                        <SkillCardHard skillTitle={'CSS3'}/>
+                        <SkillCardHard skillTitle={'SASS'}/>
+                        <SkillCardHard skillTitle={'Tailwind'}/>
+                        <SkillCardHard skillTitle={'React'}/>
+                        <SkillCardHard skillTitle={'Hooks'}/>
+                        <SkillCardHard skillTitle={'Redux-Toolkit'}/>
+                        <SkillCardHard skillTitle={'Firebase'}/>
+                        <SkillCardHard skillTitle={'Formik'}/>
+                        <SkillCardHard skillTitle={'React-hook-form'}/>
+                        <SkillCardHard skillTitle={'Express'}/>
+                        <SkillCardHard skillTitle={'Node.js'}/>
+                        <SkillCardHard skillTitle={'FLUX'}/>
+                        <SkillCardHard skillTitle={'Git'}/>
                         <SkillCardHard skillTitle={'Axios'}/>
+                        <SkillCardHard skillTitle={'Moment'}/>
+                        <SkillCardHard skillTitle={'Dayjs'}/>
                         <SkillCardHard skillTitle={'Thunk'}/>
                         <SkillCardHard skillTitle={'Rest API'}/>
-                        <SkillCardHard skillTitle={'Heroku'}/>
+                        <SkillCardHard skillTitle={'Vercel'}/>
                     </div>
                 </div>
                 <div className={`${s.cardContainer}`}>
